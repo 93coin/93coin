@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+#
+#  ninetythreecoind The ninetythreecoin more server.
+#
+#
+# chkconfig: 345 80 20
+# description: ninetythreecoind
+# processname: ninetythreecoind
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/ninetythreecoind, see below
+if [ -f /etc/sysconfig/ninetythreecoind ]; then
+        . /etc/sysconfig/ninetythreecoind
+fi
+
+RETVAL=0
+
+prog=ninetythreecoind
+# you can override the lockfile via BLACKMORED_LOCKFILE in /etc/sysconfig/ninetythreecoind
+lockfile=${BLACKMORED_LOCKFILE-/var/lock/subsys/ninetythreecoind}
+
+# ninetythreecoind defaults to /usr/bin/ninetythreecoind, override with BLACKMORED_BIN
+ninetythreecoind=${BLACKMORED_BIN-/usr/bin/ninetythreecoind}
+
+# ninetythreecoind opts default to -disablewallet, override with BLACKMORED_OPTS
+ninetythreecoind_opts=${BLACKMORED_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $bitcoind $bitcoind_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog -t600
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac
