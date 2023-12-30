@@ -7,7 +7,7 @@ What is NinetyThreeCoin?
 ----------------
 
 NinetyThreeCoin is a decentralised digital currency with near-instant transaction speeds and negligible transaction fees built upon Proof of Stake 3.0 (PoSV3, BPoS) as
-introduced by the NinetyThreeCoin development team.
+introduced by the BlackCoin development team.
 
 For more information about NinetyThreeCoin itself, see https://ninetythreecoin.org.
 
