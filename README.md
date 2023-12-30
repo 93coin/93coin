@@ -3,13 +3,13 @@ NinetyThreeCoin
 
 https://93coin.us
 
-What is NinetyThreeCoin?
+What is DISK?
 ----------------
 
-NinetyThreeCoin is a decentralised digital currency with near-instant transaction speeds and negligible transaction fees built upon Proof of Stake 3.0 (PoSV3, BPoS) as
+`DISK` is a decentralised digital currency with near-instant transaction speeds and negligible transaction fees built upon Proof of Stake 3.0 (PoSV3, BPoS) as
 introduced by the BlackCoin development team.
 
-For more information about NinetyThreeCoin itself, see https://ninetythreecoin.org.
+For more information about NinetyThreeCoin itself, see https://93coin.us.
 
 What is NinetyThreeCoin?
 ----------------
@@ -28,7 +28,7 @@ information or see https://opensource.org/licenses/MIT.
 Development Process
 -------------------
 
-The `master` branch is regularly built and tested, but is not guaranteed to be
+The `main` branch is regularly built and tested, but is not guaranteed to be
 completely stable. [Tags](https://github.com/93coin/93coin/tags) are created
 regularly to indicate new official, stable release versions of NinetyThreeCoin.
 
