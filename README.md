@@ -19,6 +19,23 @@ Bitcoin Core 0.13.2 with some patches from newer Bitcoin Core versions to offer 
 
 For more information, as well as an immediately useable, binary version of the NinetyThreeCoin software, see https://93coin.us.
 
+Genesis Block
+-------------
+```
+$ python genesis.py -a scrypt -z "Do what thou wilt shall be the whole of the Law. Love is the law, love under will."
+04ffff001d01044c52446f20776861742074686f752077696c74207368616c6c206265207468652077686f6c65206f6620746865204c61772e204c6f766520697320746865206c61772c206c6f766520756e6465722077696c6c2e
+algorithm: scrypt
+merkle hash: 48f5ce34fb431e335e0d7acabe7602ea0408c43bcb72df963a551733074a2f1e
+pszTimestamp: Do what thou wilt shall be the whole of the Law. Love is the law, love under will.
+pubkey: 04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f
+time: 1703921716
+bits: 0x1e0ffff0
+Searching for genesis hash..
+genesis hash found!
+nonce: 857842
+genesis hash: c59313e50ab54a3b9f0934ce7740600d2d0fd5bae180a474ea939514561c679f
+```
+
 License
 -------
 
